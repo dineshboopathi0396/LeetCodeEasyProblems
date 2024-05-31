@@ -2,7 +2,7 @@ package com.leetcode.easy;
 
 public class ExcelColumnTitle {
     public static void main(String[] args) {
-        int columnNumber = 27;
+        int columnNumber = 18278;
         System.out.println(convertToColumnTitle(columnNumber));
     }
 
@@ -14,6 +14,10 @@ public class ExcelColumnTitle {
             columnNumber = columnNumber / 26;
             if (reminder > 0)
                 stringBuilder.append(Character.toString((64 + reminder)));
+            if (reminder == 0) {
+                stringBuilder.append(Character.toString((64 + 26)));
+                columnNumber--;
+            }
         }
         stringBuilder.append(Character.toString((64 + columnNumber)));
         return stringBuilder.reverse().toString();

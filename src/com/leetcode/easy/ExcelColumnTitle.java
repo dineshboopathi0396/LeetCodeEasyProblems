@@ -3,6 +3,9 @@ package com.leetcode.easy;
 public class ExcelColumnTitle {
     public static void main(String[] args) {
         int columnNumber = 18278;
+        double d1 = 70.389;
+        System.out.println(d1 / 2);
+        System.out.println(Double.parseDouble("50000"));
         System.out.println(convertToColumnTitle(columnNumber));
     }
 

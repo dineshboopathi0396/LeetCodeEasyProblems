@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.easy.Arrays;
 
 public class SearchNumberFromArray {
     public static void main(String[] args) {

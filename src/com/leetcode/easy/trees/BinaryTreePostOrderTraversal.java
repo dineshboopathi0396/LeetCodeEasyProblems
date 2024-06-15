@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.easy.trees;
 
 import com.dsa.binarytree.BinaryTree;
 import com.dsa.binarytree.Node;
@@ -6,26 +6,25 @@ import com.dsa.binarytree.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTreePreOrderTraversal {
-    static List<Integer> preOrderList = new ArrayList<>();
+public class BinaryTreePostOrderTraversal {
+    static List<Integer> postOrderList = new ArrayList<>();
 
     public static void main(String[] args) {
 
         BinaryTree bt = new BinaryTree();
-        System.out.println(preOrderTraversal(bt.root));
+        System.out.println(postOrderTraversal(bt.root));
     }
 
-    public static List<Integer> preOrderTraversal(Node root) {
+    public static List<Integer> postOrderTraversal(Node root) {
         traverse(root);
-        return preOrderList;
+        return postOrderList;
     }
 
     private static void traverse(Node root) {
         if (root == null)
             return;
-        preOrderList.add(root.data);
         traverse(root.left);
         traverse(root.right);
-
+        postOrderList.add(root.data);
     }
 }

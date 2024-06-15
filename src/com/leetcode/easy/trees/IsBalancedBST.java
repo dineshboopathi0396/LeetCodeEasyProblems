@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.easy.trees;
 
 import com.dsa.binarytree.BinarySearchTree;
 import com.dsa.binarytree.Node;

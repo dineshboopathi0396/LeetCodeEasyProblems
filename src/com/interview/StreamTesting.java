@@ -10,63 +10,71 @@ public class StreamTesting {
 
         //1- Find list of students whose first name starts with alphabet A
         List<Student> startsWithA = studentList.stream().filter(s -> s.getFirstName().startsWith("A")).collect(Collectors.toList());
-        System.out.println(startsWithA);
+        System.out.println("startsWithA: " + startsWithA);
 
         //2- Group The Student By Department Names
-        Map<String, List<Student>> studentsByDepartment = studentList.stream().collect(Collectors.groupingBy(s -> s.getDepartmentName()));
-        System.out.println(studentsByDepartment);
+        Map<String, List<Student>> studentsByDepartment = studentList.stream()
+                .collect(Collectors.groupingBy(s -> s.getDepartmentName()));
+        System.out.println("studentsByDepartment: " + studentsByDepartment);
 
         //3- Find the total count of student using stream
         long count = studentList.stream().count();
-        System.out.println(count);
+        System.out.println("count: " + count);
 
         //4- Find the max age of student
         Optional<Student> maxAgeStudent = studentList.stream().max(Comparator.comparingInt(Student::getAge));
         OptionalInt maxAge = studentList.stream().mapToInt(s -> s.getAge()).max();
-        System.out.println(maxAge.getAsInt());
+        System.out.println("maxAge: " + maxAge.getAsInt());
 
         //5- Find all departments names
         List<String> departments = studentList.stream().map(s -> s.getDepartmentName()).distinct()
                 .collect(Collectors.toList());
-        System.out.println(departments);
+        System.out.println("departments: " + departments);
 
         //6- Find the count of student in each department
-        Map<String, Long> studentCount = studentList.stream().collect(Collectors.groupingBy(s -> s.getDepartmentName(), Collectors.counting()));
-        System.out.println(studentCount);
+        Map<String, Long> studentCount = studentList.stream()
+                .collect(Collectors.groupingBy(s -> s.getDepartmentName(), Collectors.counting()));
+        System.out.println("studentCount: " + studentCount);
 
         //7- Find the list of students whose age is less than 30
         List<Student> studentsLessThan30 = studentList.stream().filter(s -> s.getAge() < 30).collect(Collectors.toList());
-        System.out.println(studentsLessThan30);
+        System.out.println("studentsLessThan30: " + studentsLessThan30);
 
         //8- Find the list of students whose rank is in between 50 and 100
         List<Student> studentsByRank = studentList.stream().filter(s -> s.getRank() >= 50 && s.getRank() <= 100).collect(Collectors.toList());
-        System.out.println(studentsByRank);
+        System.out.println("studentsByRank: " + studentsByRank);
 
         //9- Find the average age of male and female students
         Map<String, Double> avgAge = studentList.stream()
                 .collect(Collectors.groupingBy(s -> s.getGender(), Collectors.averagingDouble(Student::getAge)));
-        System.out.println(avgAge);
+        System.out.println("avgAge: " + avgAge);
+
+        //9.1- Find the total no. of male and female students
+        Map<String, Long> totalMaleAndFemale = studentList.stream()
+                .collect(Collectors.groupingBy(s -> s.getGender(), Collectors.counting()));
+        System.out.println("totalMaleAndFemale: " + totalMaleAndFemale);
 
         //10- Find the department who is having maximum number of students
-        Map.Entry<String, Long> maxDepartment = studentList.stream().collect(Collectors.groupingBy(Student::getDepartmentName, Collectors.counting()))
+        Map.Entry<String, Long> maxDepartment = studentList.stream()
+                .collect(Collectors.groupingBy(Student::getDepartmentName, Collectors.counting()))
                 .entrySet().stream().max(Map.Entry.comparingByValue()).get();
-        System.out.println(maxDepartment);
+        System.out.println("maxDepartment: " + maxDepartment);
 
         //11- Find the Students who stays in Delhi and sort them by their names
         List<Student> sortedStudents = studentList.stream().filter(s -> s.getCity().equals("Delhi"))
                 .sorted(Comparator.comparing(Student::getFirstName))
                 .collect(Collectors.toList());
-        System.out.println(sortedStudents);
+        System.out.println("sortedStudents: " + sortedStudents);
 
         //12- Find the average rank in all departments
         Map<String, Double> avgRankInDepartments = studentList.stream()
                 .collect(Collectors.groupingBy(Student::getDepartmentName, Collectors.averagingDouble(Student::getRank)));
-        System.out.println(avgRankInDepartments);
+        System.out.println("avgRankInDepartments: " + avgRankInDepartments);
 
         //13- Find the highest rank in each department
         Map<String, Optional<Student>> HighestRank = studentList.stream()
                 .collect(Collectors.groupingBy(Student::getDepartmentName, Collectors.minBy(Comparator.comparing(Student::getRank))));
-        System.out.println(HighestRank);
+        System.out.println("HighestRank: " + HighestRank);
 
         //14- Find the list of students and sort them by their rank
         List<Student> stuRankSorted = studentList.stream().sorted(Comparator.comparing(Student::getRank))
@@ -76,13 +84,13 @@ public class StreamTesting {
         //15- Find the student who has second rank
         Student student = studentList.stream().sorted(Comparator.comparing(Student::getRank))
                 .skip(1).findFirst().get();
-        System.out.println(student);
+        System.out.println("Second Rank student: " + student);
 
         int sum = Arrays.stream(new int[]{1, 2, 3})
                 .filter(i -> i >= 2)
                 .map(i -> i * 3)
                 .sum();
-        System.out.println(sum);
+        System.out.println("sum: " + sum);
 
     }
 

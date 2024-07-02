@@ -1,4 +1,4 @@
-package com.leetcode.easy.recursionandbacktracking;
+package com.dsa.recursionandbacktracking;
 
 import java.util.ArrayList;
 

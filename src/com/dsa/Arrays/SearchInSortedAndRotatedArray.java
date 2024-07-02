@@ -1,4 +1,4 @@
-package com.leetcode.easy.Arrays;
+package com.dsa.Arrays;
 
 public class SearchInSortedAndRotatedArray {
     public static void main(String[] args) {

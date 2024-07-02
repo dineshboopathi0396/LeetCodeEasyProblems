@@ -1,4 +1,4 @@
-package com.leetcode.easy.recursionandbacktracking;
+package com.dsa.recursionandbacktracking;
 
 public class NQueens {
     public static void main(String[] args) {

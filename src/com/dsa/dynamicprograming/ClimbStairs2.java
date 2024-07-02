@@ -1,4 +1,4 @@
-package com.leetcode.easy.recursionandbacktracking;
+package com.dsa.dynamicprograming;
 
 public class ClimbStairs2 {
     public static void main(String[] args) {

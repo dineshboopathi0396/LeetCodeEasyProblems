@@ -1,4 +1,4 @@
-package com.leetcode.easy.recursionandbacktracking;
+package com.dsa.recursionandbacktracking;
 
 public class SudokuProblem {
     public static void main(String[] args) {

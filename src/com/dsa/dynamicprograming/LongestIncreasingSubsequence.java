@@ -1,4 +1,4 @@
-package com.leetcode.easy.recursionandbacktracking;
+package com.dsa.dynamicprograming;
 
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
@@ -12,6 +12,8 @@ public class LongestIncreasingSubsequence {
             ans = Math.max(ans, len);
         }
         System.out.println(ans);
+
+        System.out.println(lisByTabulation(arr));
     }
 
     private static int lisByMemoization2(int[] arr, int i) {
@@ -23,6 +25,23 @@ public class LongestIncreasingSubsequence {
             }
         }
         return max + 1;
+    }
+
+    private static int lisByTabulation(int[] arr) {
+        int[] dp = new int[arr.length];
+        dp[0] = 1;
+        int ans = 0;
+        for (int i = 1; i < arr.length; i++) {
+            int max = 0;
+            for (int j = 0; j < i; j++) {
+                if (arr[j] < arr[i]) {
+                    max = Math.max(max, dp[j]);
+                }
+            }
+            dp[i] = max + 1;
+            ans = Math.max(ans, dp[i]);
+        }
+        return ans;
     }
 
     private static int lisByMemoization(int[] arr, int idx, int prevIdx, int[][] dp) {

@@ -10,6 +10,7 @@ public class Sample {
         int n = 5;
         char[][] chars = buildTriangle(n, new char[n][n]);
         printTriangle(chars);
+        printTriangleAsteric(n);
 
         List<Integer> list = new ArrayList<>();
         list.add(2);
@@ -31,6 +32,24 @@ public class Sample {
         });
         System.out.println(strList);
 
+    }
+
+    private static void printTriangleAsteric(int n) {
+        int maxCount = 2 * n - 1;
+        int mid = (maxCount + 1) / 2;
+        int i = 1;
+        while (i <= n) {
+            for (int j = 1; j <= maxCount; j++) {
+                if (j >= (mid - (i - 1)) && j <= (mid + i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println("");
+            i++;
+        }
     }
 
     private static void printTriangle(char[][] chars) {

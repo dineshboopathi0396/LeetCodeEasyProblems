@@ -1,6 +1,7 @@
 package com.interview;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,9 +13,9 @@ public class Sample {
         printTriangle(chars);
         printTriangleAsteric(n);
 
-        List<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(3);
+        List<Integer> list = new ArrayList<>(Arrays.asList(new Integer[]{1, 2, 3}));
+//        list.add(2);
+//        list.add(3);
         list.add(4);
         list.add(5);
         System.out.println(list.stream().filter(i -> i % 2 == 0).map(num -> num * num).collect(Collectors.toList()));

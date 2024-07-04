@@ -2,7 +2,7 @@ package com.dsa.algorithm;
 
 public class SmallestNumber {
     public static void main(String[] args) {
-        int n = 13;
+        int n = 81000;
         System.out.println(findSmallestNumber(n));
     }
 

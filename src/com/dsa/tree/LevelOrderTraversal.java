@@ -13,7 +13,7 @@ public class LevelOrderTraversal {
         levelOrderTraversal(root);
     }
 
-    private static void levelOrderTraversal(TreeNode root) {
+    public static void levelOrderTraversal(TreeNode root) {
         Queue<TreeNode> q = new ArrayDeque<>();
         q.add(root);
         while (q.size() > 0) {

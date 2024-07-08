@@ -31,7 +31,7 @@ public class ClimbStairs2 {
         return ans;
     }
 
-    private static int findMinCostByRecursion(int[] arr, int n) {
+    private static int  findMinCostByRecursion(int[] arr, int n) {
         if (n == 1)
             return arr[0];
         if (n == 2)

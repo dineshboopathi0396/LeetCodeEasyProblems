@@ -21,6 +21,7 @@ public class InOrderTraversal {
 
     private static void inOrder(Node root, ArrayList<Integer> result) {
         if (root == null) {
+            result.add(-1);
             return;
         }
         inOrder(root.left, result);

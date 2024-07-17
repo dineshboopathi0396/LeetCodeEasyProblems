@@ -21,8 +21,11 @@ public class BinaryTreePostOrderTraversal {
     }
 
     private static void traverse(Node root) {
-        if (root == null)
+        if (root == null){
+            postOrderList.add(-1);
             return;
+        }
+
         traverse(root.left);
         traverse(root.right);
         postOrderList.add(root.data);

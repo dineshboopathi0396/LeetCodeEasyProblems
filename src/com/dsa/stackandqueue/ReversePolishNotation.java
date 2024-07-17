@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ReversePolishNotation {
     public static void main(String[] args) {
-        String[] arr = {"2", "4", "*", "3", "+"};
+        String[] arr = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
         System.out.println(solveRPN(arr));
     }
 

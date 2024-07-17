@@ -21,8 +21,11 @@ public class BinaryTreePreOrderTraversal {
     }
 
     private static void traverse(Node root) {
-        if (root == null)
+        if (root == null){
+            preOrderList.add(-1);
             return;
+        }
+
         preOrderList.add(root.data);
         traverse(root.left);
         traverse(root.right);

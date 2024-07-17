@@ -9,7 +9,7 @@ public class NQueens {
                 arr[i][j] = '.';
             }
         }
-        placeNQueens(arr, 0);
+//        placeNQueens(arr, 0);
         placeNQueensOptimized(arr, 0, new boolean[n], new boolean[2 * n - 1], new boolean[2 * n - 1]);
     }
 

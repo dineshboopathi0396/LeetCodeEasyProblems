@@ -2,7 +2,7 @@ package com.dsa.dynamicprograming;
 
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
-        int[] arr = {10, 2, 9, 5, 7, 3, 60, 80, 1};
+        int[] arr = {1};
         System.out.println(lisByRecursion(arr, 0, -1));
         System.out.println(lisByMemoization(arr, 0, -1, new int[arr.length][arr.length]));
 

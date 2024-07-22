@@ -1,5 +1,7 @@
 package com.dsa.heap;
 
+import com.leetcode.easy.ListNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,6 +18,7 @@ public class MergeKSortedList {
         ));
         System.out.println(mergeKSortedLists(arr));
     }
+
 
     private static ArrayList<Integer> mergeKSortedLists(List<List<Integer>> lists) {
         PriorityQueue<Pair> pq = new PriorityQueue<>();

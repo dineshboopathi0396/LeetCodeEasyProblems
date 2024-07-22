@@ -3,7 +3,7 @@ package com.dsa.dynamicprograming;
 
 public class ClimbStairs {
     public static void main(String[] args) {
-        int n = 55007;
+        int n = 3;
         System.out.println(climbUsingRecursion(n));
         System.out.println(climbUsingDPMemoization(n, new int[n + 1]));
         System.out.println(climbUsingDPTabulation(n, new int[n + 1]));
@@ -31,6 +31,7 @@ public class ClimbStairs {
         dp[n] = ans;
         return ans;
     }
+
 
     private static int climbUsingRecursion(int n) {
         if (n == 0)

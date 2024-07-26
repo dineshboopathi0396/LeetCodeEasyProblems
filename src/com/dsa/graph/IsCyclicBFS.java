@@ -19,9 +19,9 @@ public class IsCyclicBFS {
 //        graph[4].addAll(new ArrayList<>(Arrays.asList(3, 6, 7)));
 //        graph[5].addAll(new ArrayList<>(Arrays.asList(3, 6, 8)));
 //        graph[6].addAll(new ArrayList<>(Arrays.asList(4, 5, 7, 9)));
-        graph[7].addAll(new ArrayList<>(Arrays.asList(4, 6)));
-        graph[8].addAll(new ArrayList<>(Arrays.asList(5)));
-        graph[9].addAll(new ArrayList<>(Arrays.asList(6)));
+//        graph[7].addAll(new ArrayList<>(Arrays.asList(4, 6)));
+//        graph[8].addAll(new ArrayList<>(Arrays.asList(5)));
+//        graph[9].addAll(new ArrayList<>(Arrays.asList(6)));
 
         boolean[] visited = new boolean[graph.length];
         boolean ans = false;

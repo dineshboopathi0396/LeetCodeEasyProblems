@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FrogJump {
     public static void main(String[] args) {
         //Steps = 6
-        int[] arr = {30, 10, 60, 10, 60, 507};
+        int[] arr = {30, 10, 60, 10, 60, 50};
         int[] dp = new int[arr.length];
         Arrays.fill(dp, -1);
         System.out.println("Minimum steps: " + calcMinCost(arr, arr.length - 1));

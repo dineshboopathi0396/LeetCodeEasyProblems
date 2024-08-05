@@ -10,6 +10,7 @@ public class InsertionSort {
         printArray(arr);
     }
 
+
     private static void insertionSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int j = i;

@@ -1,5 +1,6 @@
 package com.dsa.Arrays;
 
+import java.io.BufferedReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,4 +22,6 @@ public class MajorityElement {
 
         return numberMap.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
     }
+
+
 }
